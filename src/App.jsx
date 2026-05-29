@@ -704,9 +704,21 @@ function Card({ recipe, onClick }) {
 }
 
 /* ── DETAIL ─────────────────────────────────────────────────── */
+function scaleIngredient(text, factor) {
+  if (factor === 1) return text;
+  return text.replace(/(\d+([.,]\d+)?)/g, (match) => {
+    const num = parseFloat(match.replace(",", "."));
+    const scaled = num * factor;
+    // Nice formatting: no unnecessary decimals
+    const result = Math.round(scaled * 10) / 10;
+    return result % 1 === 0 ? result.toString() : result.toString().replace(".", ",");
+  });
+}
+
 function Detail({ recipe }) {
   const [checked, setChecked] = useState(new Set());
   const [activeStep, setActiveStep] = useState(null);
+  const [portions, setPortions] = useState(1);
   const toggle = (s) => setChecked(p => { const n = new Set(p); n.has(s) ? n.delete(s) : n.add(s); return n; });
 
   return (
@@ -728,6 +740,16 @@ function Detail({ recipe }) {
         </div>
       </header>
 
+      {/* PORTIONEN */}
+      <div style={d.portionRow}>
+        <span style={d.portionLabel}>Portionen</span>
+        <div style={d.portionCtrl}>
+          <button style={d.portionBtn} onClick={() => { setPortions(p => Math.max(1, p - 1)); setChecked(new Set()); }}>−</button>
+          <span style={d.portionNum}>{portions}</span>
+          <button style={d.portionBtn} onClick={() => { setPortions(p => Math.min(20, p + 1)); setChecked(new Set()); }}>+</button>
+        </div>
+      </div>
+
       {/* ZUTATEN */}
       <section style={d.section}>
         <p style={d.secLabel}>Zutaten</p>
@@ -735,13 +757,14 @@ function Detail({ recipe }) {
           <div key={grp} style={{ marginBottom: 20 }}>
             <p style={d.grpLabel}>{grp}</p>
             {items.map((ing) => {
+              const scaled = scaleIngredient(ing, portions);
               const done = checked.has(ing);
               return (
                 <button key={ing} style={{ ...d.ingRow, opacity: done ? 0.35 : 1 }} onClick={() => toggle(ing)}>
                   <span style={{ ...d.ingBox, background: done ? "var(--green)" : "transparent", borderColor: done ? "var(--green)" : "var(--grey2)" }}>
                     {done && <span style={{ color: "#fff", fontSize: 10, fontWeight: 700, lineHeight: 1 }}>✓</span>}
                   </span>
-                  <span style={{ textDecoration: done ? "line-through" : "none", color: "var(--black)", fontSize: 15 }}>{ing}</span>
+                  <span style={{ textDecoration: done ? "line-through" : "none", color: "var(--black)", fontSize: 15 }}>{scaled}</span>
                 </button>
               );
             })}
@@ -833,6 +856,11 @@ const a = {
 const d = {
   wrap: { paddingBottom: 60 },
   header: { padding: "28px 20px 24px", borderBottom: "1px solid var(--grey2)" },
+  portionRow: { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", borderBottom: "1px solid var(--grey2)", background: "var(--grey1)" },
+  portionLabel: { fontSize: 14, fontWeight: 600, fontFamily: "'Manrope', sans-serif", color: "var(--black)" },
+  portionCtrl: { display: "flex", alignItems: "center", gap: 16 },
+  portionBtn: { width: 34, height: 34, borderRadius: 8, border: "1.5px solid var(--grey2)", background: "#fff", fontSize: 20, fontWeight: 300, color: "var(--green)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Manrope', sans-serif" },
+  portionNum: { fontSize: 18, fontWeight: 700, color: "var(--black)", minWidth: 24, textAlign: "center", fontFamily: "'Manrope', sans-serif" },
   eyebrow: { fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--green)", marginBottom: 10 },
   title: { fontFamily: "'Instrument Serif', serif", fontSize: 32, fontWeight: 400, lineHeight: 1.1, marginBottom: 10 },
   desc: { fontSize: 14, color: "var(--grey4)", lineHeight: 1.6, marginBottom: 6 },
