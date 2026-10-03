@@ -136,6 +136,42 @@ const recipes = [
     tip: "Den Teig wirklich 10 Minuten ruhen lassen – das Backpulver aktiviert sich und die Pancakes werden deutlich fluffiger.",
   },
   {
+    id: 16,
+    category: "Frühstück",
+    title: "Veganer Kaiserschmarrn mit Aquafaba",
+    source: "@corvingross",
+    prep: "10 Min.",
+    bake: "10 Min.",
+    form: "2 Portionen",
+    description:
+      "Fluffiger veganer Kaiserschmarrn – dank aufgeschlagenem Aquafaba richtig luftig, außen karamellisiert und innen zart. Mit Apfelmus servieren.",
+    ingredients: {
+      "Zutaten": [
+        "Aquafaba aus 1 Dose Kichererbsen",
+        "150 g Mehl",
+        "100 ml Pflanzenmilch",
+        "2 EL Apfelmus",
+        "2 TL Maisstärke",
+        "½ TL Backpulver",
+        "Etwas Zucker (je nach gewünschter Süße)",
+        "1 Päckchen Vanillezucker",
+        "1 Flocke vegane Butter",
+        "Puderzucker zum Servieren",
+        "Apfelmus zum Anrichten",
+        "Rosinen (optional)",
+      ],
+    },
+    steps: [
+      "Aquafaba aus der Kichererbsendose auffangen und zusammen mit der Maisstärke und dem Backpulver mit einem Handmixer steif schlagen.",
+      "Für den Teig Mehl, Pflanzenmilch, Apfelmus und etwas Zucker zu einem glatten Teig verrühren.",
+      "Das aufgeschlagene Aquafaba vorsichtig unter den Teig heben, damit möglichst viel Luft erhalten bleibt. Optional noch ein paar Rosinen dazugeben.",
+      "Eine Flocke vegane Butter in einer beschichteten Pfanne schmelzen und den Teig hineingeben. Bei mittlerer Hitze mit geschlossenem Deckel backen, bis die Unterseite goldbraun ist.",
+      "Den Teig wenden und anschließend mit einem Pfannenwender in kleinere Stücke zerteilen. Vanillezucker darüberstreuen und die Stücke kurz weiterbraten, bis sie schön karamellisiert sind.",
+      "Den Kaiserschmarrn mit Puderzucker bestreuen und zusammen mit Apfelmus servieren.",
+    ],
+    tip: "Das Aquafaba wirklich steif schlagen – das ist das Geheimnis für die luftige Textur. Je länger du schlägst (ca. 3–5 Minuten), desto fluffiger wird der Kaiserschmarrn.",
+  },
+  {
     id: 13,
     category: "Soßen",
     title: "Cremige Erdnuss-Sauce",
@@ -246,6 +282,82 @@ const recipes = [
       "Nach dem Backen noch heiß mit etwas pflanzlicher Milch bestreichen und abkühlen lassen.",
     ],
     tip: "Die Hefe sollte wirklich schäumen, bevor es weitergeht – das ist das Zeichen, dass sie aktiv ist. Kalte Hefe oder zu heiße Milch (über 40 °C) lässt den Teig nicht aufgehen.",
+  },
+  {
+    id: 15,
+    category: "Backen",
+    title: "Veganer Zupfkuchen",
+    source: "@vegan_superheroes",
+    prep: "20 Min.",
+    bake: "45 Min.",
+    form: "Springform",
+    description:
+      "Saftiger veganer Zupfkuchen mit schokoladigem Streuselteig und cremiger Vanille-Joghurt-Füllung – mehr Füllung, mehr Geschmack.",
+    ingredients: {
+      "Für Boden und Streusel": [
+        "250 g Dinkelvollkornmehl",
+        "130 g brauner Zucker (oder 110 g Süßungsmittel nach Wahl)",
+        "3 EL Backkakao",
+        "1 TL Backpulver",
+        "150 g vegane Butter",
+        "3–5 EL Pflanzenmilch",
+        "1 Prise Salz",
+      ],
+      "Für die Füllung": [
+        "1000 g veganer Skyr oder Sojajohurt",
+        "50 g vegane Butter (flüssig geschmolzen)",
+        "8 EL Zitronensaft oder 4 EL Apfelessig",
+        "2 Päckchen Vanillepuddingpulver",
+        "60 g Erythrit oder 50 g Zucker",
+        "Zitronenabrieb und Vanillezucker (optional)",
+      ],
+    },
+    steps: [
+      "Ofen auf 180 °C vorheizen.",
+      "Alle Zutaten für den Boden (bis auf die Pflanzenmilch) verkneten.",
+      "Springform mit etwas Öl einfetten.",
+      "¼ des Bodenteigs für die Streusel zur Seite stellen.",
+      "Pflanzenmilch zum restlichen Bodenteig kneten und in der Springform abdrücken.",
+      "Alle Zutaten für die Füllung in einer großen Schüssel zusammenrühren.",
+      "Füllung in die Springform geben und mit den Streuseln garnieren.",
+      "Ca. 45 Minuten im Ofen backen.",
+      "Kuchen vollständig auskühlen lassen und genießen.",
+    ],
+    tip: "Den Kuchen wirklich vollständig auskühlen lassen – am besten über Nacht im Kühlschrank. Dann lässt sich die Füllung sauber schneiden und schmeckt noch besser.",
+  },
+  {
+    id: 18,
+    category: "Backen",
+    title: "Veganer Erdnussbutter-Schoko-Kuchen",
+    source: null,
+    prep: "15 Min.",
+    bake: "50 Min.",
+    form: "Kastenform",
+    description:
+      "Saftiger Kastenkuchen mit cremiger Erdnussbutter und Zartbitterschokolade – einfach gemacht und unwiderstehlich.",
+    ingredients: {
+      "Zutaten": [
+        "150 g brauner Zucker",
+        "200 g cremige Erdnussbutter",
+        "400 g Mehl",
+        "12 g Backpulver",
+        "¼ TL Salz (bei gesalzener Erdnussbutter eher weglassen)",
+        "2 EL Apfelmus (oder ca. 30–35 g zerdrückte Banane)",
+        "150 g Sprudelwasser",
+        "250 g Hafermilch (bei Bedarf noch etwas mehr)",
+        "50 g Zartbitterschokolade",
+      ],
+    },
+    steps: [
+      "Zucker und Erdnussbutter 3–4 Minuten verrühren.",
+      "Mehl, Backpulver und Salz kurz untermischen.",
+      "Sprudelwasser, Hafermilch und Apfelmus bzw. Banane dazugeben und nur so lange verrühren, bis ein gleichmäßiger Teig entsteht.",
+      "Schokolade hacken und unterheben.",
+      "In eine gefettete Kastenform geben.",
+      "Bei 180 °C ca. 50 Minuten backen.",
+      "Stäbchenprobe machen – bleibt kein Teig haften, ist der Kuchen fertig.",
+    ],
+    tip: "Erst mit 250 g Hafermilch starten. Wenn der Teig sehr fest ist, noch schluckweise 20–30 g dazugeben. Nicht zu lange rühren – das macht den Kuchen zäh.",
   },
   {
     id: 6,
@@ -509,6 +621,72 @@ const recipes = [
     ],
     tip: "Etwas Pastakochwasser aufheben – die Stärke darin macht die Béchamel besonders cremig. Den Lauch wirklich großzügig mit Olivenöl einreiben, damit er im Ofen schön röstig wird.",
   },
+  {
+    id: 14,
+    category: "Kochen",
+    title: "Selbstgemachte Tortilla-Wraps",
+    source: "@veganewunder",
+    prep: "15 Min.",
+    bake: "20 Min.",
+    form: "4–8 Wraps",
+    description:
+      "Frische Tortilla-Wraps ohne Zusatzstoffe – in unter 30 Minuten selbst gemacht, geschmeidig und vielseitig einsetzbar.",
+    ingredients: {
+      "Zutaten": [
+        "250 g Weizenmehl (Typ 405 oder 550)",
+        "½ TL Backpulver",
+        "½ TL Salz",
+        "3 EL Olivenöl",
+        "120 ml warmes Wasser",
+      ],
+    },
+    steps: [
+      "In einer großen Schüssel Mehl, Backpulver und Salz miteinander vermengen. Dann Olivenöl sowie warmes Wasser hinzufügen und zu einem geschmeidigen Teig verkneten. Sollte der Teig zu klebrig sein, etwas mehr Mehl einarbeiten. Ist er zu trocken, ein wenig mehr Wasser hinzugeben.",
+      "Den Teig zu einer Kugel formen und abgedeckt etwa 15–20 Minuten ruhen lassen. Danach den Teig in 4–8 gleich große Stücke teilen und zu kleinen Kugeln rollen.",
+      "Jede Teigkugel mit einem Nudelholz zu dünnen, runden Fladen ausrollen.",
+      "Eine trockene Pfanne erhitzen und die Tortillas nacheinander bei mittlerer Hitze für jeweils 30–60 Sekunden pro Seite backen, bis sich leichte Bräunungen zeigen.",
+      "Die fertigen Tortillas stapeln und mit einem Küchentuch abdecken, damit sie schön weich bleiben.",
+    ],
+    tip: "Je dünner du die Tortillas ausrollst, desto flexibler und weicher werden sie. Mit dem Küchentuch abdecken ist wichtig – der Dampf hält sie geschmeidig.",
+  },
+  {
+    id: 17,
+    category: "Kochen",
+    title: "Auberginen Unagi",
+    source: "@veganewunder",
+    prep: "10 Min.",
+    bake: "15 Min.",
+    form: "2 Portionen",
+    description:
+      "Saftige Auberginen in einer süß-salzigen Unagi-Sauce – außen karamellisiert, innen butterzart. Serviert auf Reis mit Sesam und Frühlingszwiebeln.",
+    ingredients: {
+      "Für die Auberginen": [
+        "2 große Auberginen",
+        "3 EL neutrales Öl",
+      ],
+      "Extra-Unagi-Sauce": [
+        "6 EL Sojasoße",
+        "5 EL Mirin",
+        "4 EL Wasser",
+        "2 EL Ahornsirup",
+        "1 EL Reisessig",
+        "1 TL Maisstärke + 3 EL Wasser (optional, sehr empfohlen)",
+      ],
+      "Zum Servieren": [
+        "Sushi-Reis oder Jasminreis",
+        "gerösteter Sesam",
+        "Frühlingszwiebeln",
+      ],
+    },
+    steps: [
+      "Auberginen längs halbieren. Die Schnittflächen rautenförmig einschneiden, dabei nicht durch die Schale schneiden.",
+      "Öl in einer großen Pfanne erhitzen. Auberginen mit der Schnittfläche nach unten bei mittlerer Hitze 6–8 Minuten braten, bis sie goldbraun und weich sind. Kurz wenden und auch die Schale anbraten.",
+      "Sojasoße, Mirin, Wasser, Ahornsirup und Reisessig separat verrühren. Mischung in die Pfanne geben, Hitze reduzieren und 2–3 Minuten sanft köcheln lassen.",
+      "Optional die angerührte Stärke einrühren und die Sauce leicht eindicken lassen. Auberginen mehrfach wenden und immer wieder mit Sauce übergießen, bis sie schön glänzen.",
+      "Auberginen auf Reis legen und die übrige Sauce großzügig darüberlöffeln. Mit geröstetem Sesam und Frühlingszwiebeln garnieren.",
+    ],
+    tip: "Das rautenförmige Einschneiden ist wichtig – so kann die Sauce tief in die Aubergine einziehen und karamellisiert schön. Die Maisstärke für die Sauce wirklich empfohlen, sie macht den Unterschied.",
+  },
 ];
 
 const categories = [...new Set(recipes.map((r) => r.category))];
@@ -727,7 +905,17 @@ function Detail({ recipe }) {
       {/* Header */}
       <header style={d.header}>
         <p style={d.eyebrow}>{recipe.category}</p>
-        <h1 style={d.title}>{recipe.title}</h1>
+        <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
+          <h1 style={{ ...d.title, marginBottom: 0 }}>{recipe.title}</h1>
+          <a
+            href={`https://wa.me/?text=${encodeURIComponent("Schau mal dieses Rezept: " + recipe.title + " 🌿\n\n" + recipe.description + "\n\n👉 https://plant-based-recipes-mu.vercel.app")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={d.waBtn}
+          >
+            <span style={{ fontSize: 20 }}>📤</span>
+          </a>
+        </div>
         <p style={d.desc}>{recipe.description}</p>
         {recipe.source && <p style={d.source}>Quelle: {recipe.source}</p>}
         <div style={d.chips}>
@@ -863,6 +1051,7 @@ const d = {
   portionNum: { fontSize: 18, fontWeight: 700, color: "var(--black)", minWidth: 24, textAlign: "center", fontFamily: "'Manrope', sans-serif" },
   eyebrow: { fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--green)", marginBottom: 10 },
   title: { fontFamily: "'Instrument Serif', serif", fontSize: 32, fontWeight: 400, lineHeight: 1.1, marginBottom: 10 },
+  waBtn: { flexShrink: 0, width: 40, height: 40, borderRadius: 10, background: "var(--grey1)", border: "1px solid var(--grey2)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", marginTop: 4 },
   desc: { fontSize: 14, color: "var(--grey4)", lineHeight: 1.6, marginBottom: 6 },
   source: { fontSize: 12, color: "var(--grey3)", fontStyle: "italic", marginBottom: 20 },
   chips: { display: "flex", gap: 8, flexWrap: "wrap", marginTop: 20 },
